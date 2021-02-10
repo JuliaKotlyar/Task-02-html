@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Noto+Sans+TC&display=swap');
+:root {
+   font-family: 'Noto Sans TC', sans-serif;
+   scroll-behavior: smooth;
+}
+
+body {}
+
+.white-text {
+   color: white;
+   font-family: 'Noto Sans TC', sans-serif;
+}
+
+.pink-text {
+   color: MistyRose;
+}
+
+li {
+   position: relative;
+}
+
+header nav ul .menu {
+   position: absolute;
+   display: flex;
+   justify-content: space-around;
+   list-style-type: none;
+   align-items: flex-start;
+}
+
+header .banner {
+   background: left / contain no-repeat url(../img/homefit.svg), url(../img/woman-grey.png);
+   background-size: 20%, 100%;
+   background-repeat: no-repeat;
+   background-position: top left;
+   min-height: 900px;
+}
+
+#services {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: flex-start;
+}
