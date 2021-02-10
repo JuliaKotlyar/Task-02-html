@@ -19,12 +19,19 @@ li {
    position: relative;
 }
 
-header nav ul .menu {
+header nav .menu a {
+   padding: 3px;
    position: absolute;
    display: flex;
    justify-content: space-around;
-   list-style-type: none;
    align-items: flex-start;
+   text-decoration: none;
+   list-style-type: none;
+}
+
+header .menu a:hover {
+   font-weight: bold;
+   color: midnightblue;
 }
 
 header .banner {
