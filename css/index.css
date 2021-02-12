@@ -1,38 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
 :root {
-   font-family: 'Noto Sans TC', sans-serif;
+   --main-color: #707070;
+   --main-font: 'Fira Sans', sans-serif;
    scroll-behavior: smooth;
 }
 
-body {}
-
-.white-text {
-   color: white;
-   font-family: 'Noto Sans TC', sans-serif;
-}
-
-.pink-text {
-   color: MistyRose;
-}
-
-li {
-   position: relative;
-}
-
-header nav .menu a {
-   padding: 3px;
-   position: absolute;
-   display: flex;
-   justify-content: space-around;
-   align-items: flex-start;
-   text-decoration: none;
-   list-style-type: none;
-}
-
-header .menu a:hover {
-   font-weight: bold;
-   color: midnightblue;
-}
+/* body {
+   max-width: 980px;
+   margin: auto;
+} */
 
 header .banner {
    background: left / contain no-repeat url(../img/homefit.svg), url(../img/woman-grey.png);
@@ -42,9 +18,108 @@ header .banner {
    min-height: 900px;
 }
 
-#services {
+header .menu ul li {
+   margin: 0 10px;
+}
+
+header .menu ul {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
-   align-items: flex-start;
+   justify-content: flex-end;
+   list-style-type: none;
+   font-size: smaller;
+   font-weight: bold;
+   padding-top: 40px;
+   padding-right: 300px;
+}
+
+header nav .menu a {
+   padding: 3px;
+   text-decoration: none;
+}
+
+header .menu a:hover {
+   font-weight: bold;
+   color: midnightblue;
+}
+
+header .social-icons li {
+   display: inline-block;
+   list-style-type: none;
+}
+
+header .social-icons li img {
+   width: 30px;
+   height: 30px;
+}
+
+.block-start {
+   padding: 35px 0 0 35px;
+}
+
+.block-name {
+   color: MistyRose;
+   font-family: 'Patrick Hand', undefined;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.slogan {
+   color: white;
+   font-family: 'Rubik', sans-serif;
+   font-weight: 800;
+   flex-wrap: wrap;
+   text-transform: uppercase;
+   line-height: 0.9;
+}
+
+.healthy-color {
+   color: mistyrose;
+}
+
+h1 {
+   font-size: 90px;
+}
+
+.total-text {
+   color: white;
+   padding-bottom: 50px;
+   font-family: var(--main-font);
+   font-weight: bold;
+}
+
+.gradient-button {
+   text-decoration: none;
+   color: white;
+   padding: 20px 30px;
+   margin: 20px 60px;
+   border-radius: 60px;
+   border-width: 0;
+   font-family: var(--main-font);
+   text-transform: uppercase;
+   transition: 0.6s;
+   background-image: linear-gradient(to right, #9EEFE1 0%, #56dbec 51%, #5acfe4 100%);
+   background-image: transparent;
+}
+
+.gradient-button:hover {
+   background-image: linear-gradient(to left, #9EEFE1 0%, #56dbec 51%, #5acfe4 100%);
+}
+
+/* servises */
+
+main .services {
+   background-image: url(../img/strength-training.png), 
+   url(../img/weight-loss-program.png), 
+   url(../img/instructors.png);
+   background-repeat: repeat-y, repeat-y, repeat-y;
+   background-position: left, center, right;
+   background-size: 600px;
+   height: 550px;
+   justify-content: center; 
+}
+
+main .name-services {
+   flex-direction: row;
+
 }
