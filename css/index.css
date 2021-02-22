@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
+Skip to content Search or jump to… Pull requests Issues Marketplace Explore @JuliaKotlyar JuliaKotlyar / Task-02-html 1 00 Code Issues Pull requests Actions Projects Wiki Security Insights Settings Task-02-html/css/index.css @JuliaKotlyar JuliaKotlyar add css Latest commit be1709f 8 days ago History 1 contributor 122 lines (103 sloc) 2.35 KB @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
 :root {
    --main-color: #707070;
    --main-font: 'Fira Sans', sans-serif;
    scroll-behavior: smooth;
+}
+
+@media (max-width: 992px); 
+
+* {
+   margin: 0;
 }
 
 body {
@@ -15,7 +21,12 @@ header .banner {
    background-size: 20%, 100%;
    background-repeat: no-repeat;
    background-position: top left;
-   min-height: 900px;
+   min-height: 690px;
+}
+
+.menu {
+   display: flex;
+   justify-content: flex-end;
 }
 
 header .menu ul li {
@@ -25,12 +36,9 @@ header .menu ul li {
 header .menu ul {
    display: flex;
    flex-direction: row;
-   justify-content: flex-end;
    list-style-type: none;
    font-size: smaller;
    font-weight: bold;
-   padding-top: 40px;
-   padding-right: 300px;
 }
 
 header nav .menu a {
@@ -54,7 +62,7 @@ header .social-icons li img {
 }
 
 .block-start {
-   padding: 10px 0 0 35px;
+   padding: 70px 0 0 35px;
 }
 
 .block-name {
@@ -78,7 +86,7 @@ header .social-icons li img {
 }
 
 h1 {
-   font-size: 90px;
+   font-size: 50px;
 }
 
 .total-text {
@@ -112,11 +120,19 @@ main .services {
    background-image: url(../img/strength-training.png), url(../img/weight-loss-program.png), url(../img/instructors.png);
    background-repeat: repeat-y, repeat-y, repeat-y;
    background-position: left, center, right;
-   background-size: 600px;
+   background-size: 34%;
    height: 550px;
    justify-content: center;
 }
 
 main .name-services {
    flex-direction: row;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.date-time {
+   font-size: xx-large;
+   color: mediumturquoise;
+   margin-left: 50px;
 }
