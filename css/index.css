@@ -1,4 +1,4 @@
-Skip to content Search or jump to… Pull requests Issues Marketplace Explore @JuliaKotlyar JuliaKotlyar / Task-02-html 1 00 Code Issues Pull requests Actions Projects Wiki Security Insights Settings Task-02-html/css/index.css @JuliaKotlyar JuliaKotlyar add css Latest commit be1709f 8 days ago History 1 contributor 122 lines (103 sloc) 2.35 KB @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
 :root {
    --main-color: #707070;
    --main-font: 'Fira Sans', sans-serif;
