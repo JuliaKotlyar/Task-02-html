@@ -1,138 +1,225 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Patrick+Hand&family=Rubik+Mono+One&display=swap');
 :root {
-   --main-color: #707070;
-   --main-font: 'Fira Sans', sans-serif;
-   scroll-behavior: smooth;
+  --main-color: #707070;
+  --main-font: 'Fira Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
-@media (max-width: 992px); 
-
 * {
-   margin: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-   max-width: 1200px;
-   margin: auto;
+  max-width: 1084px;
+  margin: 0 auto;
+}
+.header-logo {
+  display: block;
+  max-width: 100%;
+  width: 221px;
+  height: 60px;
+  position: relative;
+  padding: 10px 35px;
+  z-index: 3;
 }
 
 header .banner {
-   background: left / contain no-repeat url(../img/homefit.svg), url(../img/woman-grey.png);
-   background-size: 20%, 100%;
-   background-repeat: no-repeat;
-   background-position: top left;
-   min-height: 690px;
+  background: url(../img/woman-grey.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .menu {
-   display: flex;
-   justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 header .menu ul li {
-   margin: 0 10px;
+  margin: 0 10px;
 }
 
 header .menu ul {
-   display: flex;
-   flex-direction: row;
-   list-style-type: none;
-   font-size: smaller;
-   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-weight: bold;
+  margin-top: -50px;
+  padding-inline-start: 0;
+  flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 header nav .menu a {
-   padding: 3px;
-   text-decoration: none;
+  padding: 3px;
+  text-decoration: none;
+  color: #213270b3;
+  font-size: 1.2rem;
 }
 
 header .menu a:hover {
-   font-weight: bold;
-   color: midnightblue;
+  font-weight: bold;
+  color: #213270;
 }
 
 header .social-icons li {
-   display: inline-block;
-   list-style-type: none;
+  display: inline-block;
+  list-style-type: none;
 }
 
 header .social-icons li img {
-   width: 30px;
-   height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
 }
 
+/* burger */
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 870px) {
+  .burger-menu {
+    display: block;
+    position: relative;
+    right: 20px;
+    width: 20px;
+    height: 7px;
+    margin-left: 20px;
+  }
+
+  .burger-menu span {
+    position: absolute;
+    background-color: #213270b3;
+    width: 100%;
+    right: 0;
+    height: 2px;
+    top: 9px;
+  }
+  .burger-menu:before,
+  .burger-menu:after {
+    content: '';
+    background-color: #213270b3;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+  }
+  .burger-menu:before {
+    top: 0;
+  }
+  .burger-menu:after {
+    bottom: 0;
+  }
+}
+
+/*  */
+
 .block-start {
-   padding: 70px 0 0 35px;
+  padding: 70px 0 44px 35px;
 }
 
 .block-name {
-   color: MistyRose;
-   font-family: 'Patrick Hand', undefined;
-   font-size: 30px;
-   font-weight: bold;
+  color: MistyRose;
+  font-family: 'Patrick Hand', undefined;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .slogan {
-   color: white;
-   font-family: 'Rubik', sans-serif;
-   font-weight: 800;
-   flex-wrap: wrap;
-   text-transform: uppercase;
-   line-height: 0.9;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-size: 50px;
 }
 
 .healthy-color {
-   color: mistyrose;
+  color: mistyrose;
 }
 
 h1 {
-   font-size: 50px;
+  font-weight: 700;
+  font-size: calk(15px + 35 * (100vw / 990));
+}
+
+@media (max-width: 767px) {
+  .block-start {
+    display: contents;
+    position: fixed;
+  }
+  .gradient-button {
+    width: 30%;
+    height: 20%;
+    position: fixed;
+  }
+  .services {
+    display: flex;
+    position: fixed;
+  }
 }
 
 .total-text {
-   color: white;
-   padding-bottom: 10px;
-   font-family: var(--main-font);
-   font-weight: bold;
+  color: white;
+  padding-bottom: 10px;
+  font-family: var(--main-font);
+  font-weight: bold;
 }
 
 .gradient-button {
-   text-decoration: none;
-   color: white;
-   padding: 20px 30px;
-   margin: 20px 40px;
-   border-radius: 40px;
-   border-width: 0;
-   font-family: var(--main-font);
-   text-transform: uppercase;
-   transition: 0.6s;
-   background-image: linear-gradient(to right, #9EEFE1 0%, #56dbec 51%, #5acfe4 100%);
-   background-image: transparent;
+  text-decoration: none;
+  color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 40px;
+  border-width: 0;
+  font-family: var(--main-font);
+  text-transform: uppercase;
+  transition: 0.6s;
+  background-image: linear-gradient(
+    to right,
+    #9eefe1 0%,
+    #56dbec 51%,
+    #5acfe4 100%
+  );
+  background-image: transparent;
 }
 
 .gradient-button:hover {
-   background-image: linear-gradient(to left, #9EEFE1 0%, #56dbec 51%, #5acfe4 100%);
+  background-image: linear-gradient(
+    to left,
+    #9eefe1 0%,
+    #56dbec 51%,
+    #5acfe4 100%
+  );
 }
 
 /* servises */
 
 main .services {
-   background-image: url(../img/strength-training.png), url(../img/weight-loss-program.png), url(../img/instructors.png);
-   background-repeat: repeat-y, repeat-y, repeat-y;
-   background-position: left, center, right;
-   background-size: 34%;
-   height: 550px;
-   justify-content: center;
+  background-image: url(../img/strength-training.png),
+    url(../img/weight-loss-program.png), url(../img/instructors.png);
+  background-repeat: repeat-y, repeat-y, repeat-y;
+  background-position: left, center, right;
+  background-size: 34%;
+  height: 350px;
+  justify-content: center;
 }
 
 main .name-services {
-   flex-direction: row;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .date-time {
-   font-size: xx-large;
-   color: mediumturquoise;
-   margin-left: 50px;
+  font-size: xx-large;
+  color: mediumturquoise;
+  margin-left: 50px;
 }
