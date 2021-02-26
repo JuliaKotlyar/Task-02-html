@@ -4,59 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Fitness</title>
-    <link rel="stylesheet" href="css/index.css" />
     <link rel="icon" href="img/heart.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
-
   <body>
-    <header>
+    <header class="header">
       <div class="banner">
-        <a href="#" class="header-logo">
-          <img src="img/homefit.svg" alt="logo" />
-        </a>
-        <div class="burger-menu">
-          <span></span>
-        </div>
-        <nav>
-          <div class="menu">
-            <ul>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#">Classes</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
-              </li>
-              <li>
-                <a href="#">Testimonials</a>
-              </li>
-              <li>
-                <a href="#">Contact us</a>
-              </li>
-            </ul>
-            <div class="social-icons">
-              <ul>
-                <li>
-                  <a href="http://www.facebook.com"
-                    ><img src="img/facebook.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="http://www.Instagram.com"
-                    ><img src="img/instagram.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="http://www.youtube.com"
-                    ><img src="img/youtube.png"
-                  /></a>
-                </li>
-              </ul>
+        <div class="header-container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="header-logo" href="#">
+                <img src="img/homefit.svg" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Classes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+                  <div class="sosmedia">
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://www.facebook.com"
+                        ><img src="img/facebook.png"
+                      /></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://www.Instagram.com"
+                        ><img src="img/instagram.png"
+                      /></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="http://www.youtube.com"
+                        ><img src="img/youtube.png"
+                      /></a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
         <div class="block-start">
           <span class="block-name">It's time to</span>
           <h1 class="slogan">
@@ -72,8 +87,8 @@
       </div>
     </header>
     <main>
-      <div class="services">
-        <article>
+      <!-- <div class="services"> -->
+      <!-- <article>
           <div class="name-services">
             <h2>Strength Trainings</h2>
             <a href="#">Learn More</a>
@@ -83,48 +98,45 @@
             <a href="#">Learn More</a>
           </div>
         </article>
-      </div>
+      </div> -->
 
       <!--about us-->
-      <img src="img/woman-bottle.jpg" alt="Woman with bottle" />
-      <div class="about-us">
-        Welcome there!
-        <section>
-          <div>
-            <div>Join Online Fitness Classes!</div>
-            <p>
+
+      <div id="about-us" class="box">
+          <div class="about-us-info">
+            <div class="about-us-text">
+            <span class="block-name">Welcome there!</span>
+            <p class="block-title">Join Online Fitness Classes!</p>
+            <p class="text-italic">
               Training at home is no less effective than in the gym! Train with
               us wherever you are and whatever are your goals.
             </p>
-          </div>
-          <div>
-            <h2>Best Instructors</h2>
-            <p>
+
+            <h2 class="about-us-title">Best Instructors</h2>
+            <p class="total-text">
               Our coaches are happy to conduct training sessions online. Each
               instructor is responsible for one type of training.
             </p>
-          </div>
-          <div>
-            <h2>Different programs</h2>
-            <p>
+
+            <h2 class="about-us-title">Different programs</h2>
+            <p class="total-text">
               Don't feel like stretching today? Choose slow yoga classes,
               functional training or anything else!
             </p>
-          </div>
-          <div>
-            <h2>Nice Prices</h2>
-            <p>
+
+            <h2 class="about-us-title">Nice Prices</h2>
+            <p class="total-text">
               HOMEFIT classes are cheaper than a gym membership. You can pay for
               each session for the entire program at once.
             </p>
+            <button class="gradient-button">Our classes</button>
+            </div>
           </div>
-        </section>
-        <button name="button">Our classes</button>
+        </div>
       </div>
-      <br />
 
       <!--how to start block-->
-      <img src="img/background-pink.jpg" alt="Background pink" />
+      <!-- <img src="img/background-pink.jpg" alt="Background pink" />
       <div class="start">
         How to start
         <section class="how-to-start">
@@ -164,57 +176,61 @@
           </p>
           <button name="button">Choose a class</button>
         </section>
-      </div>
+      </div> -->
 
       <!--our classes block-->
 
       <div class="our-classes">
-        <h1>Take Your Pick</h1>
-        <article>
-          <img src="img/pilates-yoga.jpg" alt="Pilates & Yoga" />
+        <span class="block-name">Our Classes</span>
+        <p class="block-title">Take Your Pick</p>
+        <div id="carousel">
+          <img class="classes-image" src="" alt="">
+          <!-- <img class="classes-image" src="img/pilates-yoga.jpg" alt="Pilates&Yoga">
+          <img class="classes-image" src="img/man-fitness.jpg" alt="Man fitness">
+           <img class="classes-image" src="img/children-fit.jpg" alt="Children's program">
+           <img class="classes-image" src="img/pregnant-fitness.jpg" alt="Pregnancy fitness">
+            <img class="classes-image" src="img/fitness-seniors.jpg" alt="Fitness for Seniors"> -->
+            <button class="btn-prev">&lt</button>
+            <button class="btn-next">&gt</button>
           <h2>Pilates & Yoga</h2>
           <p>A combined program for stretching and strengthening muscles</p>
           <button name="button">Start now</button>
-        </article>
-        <article>
-          <img src="img/man-fitness.jpg" alt="Man fitness" />
+
+          
           <h2>Fitness</h2>
           <p>
             A set of exercises to increase strength, endurance, burn body fat.
           </p>
           <button name="button">Start now</button>
-        </article>
-        <article>
-          <img src="img/children-fit.jpg" alt="Children's program" />
+
+         
           <h2>Children's Programs</h2>
           <p>
             Home sessions designed specifically for children and their parents.
           </p>
           <button name="button">Start now</button>
-        </article>
-        <article>
-          <img src="img/pregnant-fitness.jpg" alt="Pregnancy fitness" />
+
+          
           <h2>Pregnancy Fitness</h2>
           <p>
             A special set of safe and easy exercises for pregnant women willing
             to stay in shape.
           </p>
           <button name="button">Start now</button>
-        </article>
-        <article>
-          <img src="img/fitness-seniors.jpg" alt="Fitness for Seniors" />
+   
+         
           <h2>Fitness for Seniors</h2>
           <p>
             A set of physical activities for seniors who want to look great and
             stay healthy.
           </p>
           <button name="button">Start now</button>
-        </article>
+        </div>
       </div>
 
       <!--Price block-->
 
-      <section>
+      <!-- <section>
         Choose your program and plan
         <h1>15 Types of Classes</h1>
         <h3>Pilates & yoga</h3>
@@ -258,10 +274,10 @@
           <button name="button">WATCH ON YOUTUBE</button>
           <a href="#"></a>
         </article>
-      </div>
+      </div> -->
 
       <!--Instructors-->
-      <section>
+      <!-- <section>
         <div>Helping you fo further</div>
 
         <h2>Our Instructors</h2>
@@ -295,11 +311,11 @@
           <img src="img/girl-press.png" alt="Download" />
           <img src="img/phone.png" alt="Phone" />
         </section>
-      </div>
+      </div> -->
 
       <!--Testimonials-->
 
-      <div class="reviews">
+      <!-- <div class="reviews">
         <span>Testimonials</span>
         <article>
           <h2>What Our Clients Say</h2>
@@ -336,11 +352,11 @@
             <p>Liz Wenner, 33 y.o. December 28, 2019</p>
           </div>
         </article>
-      </div>
+      </div> -->
 
       <!--Start now-->
 
-      <div class="free-start">
+      <!-- <div class="free-start">
         <span>Start NOW!</span>
         <article>
           <h2>Shed Excess Pounds With a Personalized Plan!</h2>
@@ -351,10 +367,10 @@
           <button name="button">try for free</button>
           <img src="img/start-now.png" alt="Start now" />
         </article>
-      </div>
+      </div> -->
 
       <!--Latest Posts-->
-
+<!-- 
       <div class="posts">
         <span>Latest Posts</span>
         <h2>Learn How to Keep Fit</h2>
@@ -410,11 +426,11 @@
             <td>Satisfaction</td>
           </tr>
         </table>
-      </div>
+      </div> -->
 
       <!--frequently asked questions-->
 
-      <div class="questions">
+      <!-- <div class="questions">
         <span>FAQ</span>
         <div>
           <h2>Popular Questions About Online Fitness</h2>
@@ -468,10 +484,10 @@
           </p>
         </article>
       </div>
-    </main>
+    </main> -->
 
     <!--Contact form-->
-    <footer>
+    <!-- <footer>
       <div class="contact-form">
         <img src="img/girl-carpet.jpg" alt="Girl carpet" />
         <span>Contact form</span>
@@ -496,7 +512,7 @@
               name="program"
               placeholder="Choose your program"
               required
-            />
+            /> -->
 
             <!--починить выпадайку
             <nav>
@@ -512,14 +528,14 @@
             </ul>
             </nav>
          -->
-          </label>
+          <!-- </label>
           <br />
           <button>Send a request</button>
         </form>
-      </div>
+      </div> -->
 
       <!--Follow us-->
-      <h2>Follow Us on Instagram #HOME_FIT</h2>
+      <!-- <h2>Follow Us on Instagram #HOME_FIT</h2>
       <img src="img/ball-tv.jpg" alt="Ball TV" />
       <img src="img/dumbbells.jpg" alt="Dumbbells" />
       <img src="img/plank.jpg" alt="Plank" />
@@ -539,11 +555,15 @@
           <td>home-fit@email.com</td>
           <td>2 Broklyn St, NY</td>
         </tr>
-      </table>
+      </table> -->
 
       <!--добавить кнопки fb insta youtube-->
-    </footer>
-
+    <!-- </footer> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/index.js"></script>
   </body>
 </html>

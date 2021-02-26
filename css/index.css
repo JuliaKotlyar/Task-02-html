@@ -7,125 +7,91 @@
 
 * {
   margin: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
   max-width: 1084px;
   margin: 0 auto;
 }
+
+img {
+  max-width: 100%;
+}
+
+.sosmedia a img {
+  height: 30px;
+  width: 30px;
+}
+
+.sosmedia li {
+  display: inline-block;
+}
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-light .navbar-toggler {
+  color: transparent;
+  border-color: transparent;
+}
+.navbar-light .navbar-toggler-icon {
+  color: #213270b3;
+}
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #213270b3;
+  font-size: 200;
+  font-family: (var(--main-font));
+  font-weight: bold;
+}
+
 .header-logo {
   display: block;
   max-width: 100%;
   width: 221px;
   height: 60px;
   position: relative;
-  padding: 10px 35px;
+  padding: 10px 25px;
   z-index: 3;
 }
 
 header .banner {
   background: url(../img/woman-grey.png);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
-header .menu ul li {
-  margin: 0 10px;
-}
-
-header .menu ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  font-weight: bold;
-  margin-top: -50px;
-  padding-inline-start: 0;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-}
-
-header nav .menu a {
-  padding: 3px;
-  text-decoration: none;
-  color: #213270b3;
-  font-size: 1.2rem;
-}
-
-header .menu a:hover {
-  font-weight: bold;
-  color: #213270;
-}
-
-header .social-icons li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-header .social-icons li img {
-  width: 20px;
-  height: 20px;
-  margin-top: 0;
-}
-
-/* burger */
-
-.burger-menu {
-  display: none;
-}
-
-@media (max-width: 870px) {
-  .burger-menu {
-    display: block;
-    position: relative;
-    right: 20px;
-    width: 20px;
-    height: 7px;
-    margin-left: 20px;
-  }
-
-  .burger-menu span {
-    position: absolute;
-    background-color: #213270b3;
-    width: 100%;
-    right: 0;
-    height: 2px;
-    top: 9px;
-  }
-  .burger-menu:before,
-  .burger-menu:after {
-    content: '';
-    background-color: #213270b3;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    right: 0;
-  }
-  .burger-menu:before {
-    top: 0;
-  }
-  .burger-menu:after {
-    bottom: 0;
+@media (min-width: 992px) {
+  .banner {
+    padding-bottom: 190px;
   }
 }
-
-/*  */
 
 .block-start {
-  padding: 70px 0 44px 35px;
+  padding: 70px 0 0 35px;
 }
 
 .block-name {
-  color: MistyRose;
+  color: #ffe2de;
   font-family: 'Patrick Hand', undefined;
   font-size: 30px;
   font-weight: bold;
@@ -137,37 +103,26 @@ header .social-icons li img {
   flex-wrap: wrap;
   text-transform: uppercase;
   line-height: 0.9;
-  font-size: 50px;
+  font-size: 78px;
+  font-weight: 800;
+  padding-top: 20px;
 }
 
 .healthy-color {
-  color: mistyrose;
+  color: #ffe2de;
+  word-wrap: break-word;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: calk(15px + 35 * (100vw / 990));
-}
-
-@media (max-width: 767px) {
-  .block-start {
-    display: contents;
-    position: fixed;
-  }
-  .gradient-button {
-    width: 30%;
-    height: 20%;
-    position: fixed;
-  }
-  .services {
-    display: flex;
-    position: fixed;
+@media (max-width: 992px) {
+  h1 {
+    font-size: inherit;
   }
 }
 
 .total-text {
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 100px;
+  padding-top: 100px;
   font-family: var(--main-font);
   font-weight: bold;
 }
@@ -175,18 +130,18 @@ h1 {
 .gradient-button {
   text-decoration: none;
   color: white;
-  height: 50px;
-  width: 100px;
-  border-radius: 40px;
+  height: 55px;
+  width: 220px;
+  border-radius: 27px;
   border-width: 0;
   font-family: var(--main-font);
   text-transform: uppercase;
   transition: 0.6s;
   background-image: linear-gradient(
     to right,
-    #9eefe1 0%,
-    #56dbec 51%,
-    #5acfe4 100%
+    #82d2eb 0%,
+    #5bc9eb 51%,
+    #34bfd8 100%
   );
   background-image: transparent;
 }
@@ -194,21 +149,21 @@ h1 {
 .gradient-button:hover {
   background-image: linear-gradient(
     to left,
-    #9eefe1 0%,
-    #56dbec 51%,
-    #5acfe4 100%
+    #82d2eb 0%,
+    #5bc9eb 51%,
+    #34bfd8 100%
   );
 }
 
 /* servises */
-
+/* 
 main .services {
   background-image: url(../img/strength-training.png),
     url(../img/weight-loss-program.png), url(../img/instructors.png);
   background-repeat: repeat-y, repeat-y, repeat-y;
   background-position: left, center, right;
   background-size: 34%;
-  height: 350px;
+  height: 500px;
   justify-content: center;
 }
 
@@ -216,10 +171,70 @@ main .name-services {
   flex-direction: row;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 
 .date-time {
   font-size: xx-large;
   color: mediumturquoise;
-  margin-left: 50px;
+  margin-left: 0;
+}
+
+#about-us {
+  background-image: url(../img/woman-bottle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-text {
+  padding: 20px 15px 20px 15px;
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 40%;
+  text-align: left;
+}
+
+@media (min-width: 1084px) {
+  .box {
+    max-width: 100%;
+  }
+}
+.block-title {
+  font-family: Rubik, sans-serif;
+  font-size: 55px;
+  font-weight: 760;
+  line-height: 0.9;
+  color: #213270;
+}
+.text-italic {
+  font-family: var(--main-font);
+  color: #213270b3;
+  font-style: italic;
+  font-size: 19px;
+}
+#about-us .block-name {
+  color: rgb(246, 181, 173);
+}
+#about-us .total-text {
+  font-family: var(--main-font);
+  color: var(--main-color);
+  padding: 10px 0 10px 0;
+  font-weight: 300;
+}
+.about-us-title {
+  font-family: Rubic, sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  color: rgb(246, 181, 173);
+}
+.our-classes .block-name {
+  color: rgb(246, 181, 173);
+}
+
+/* carousel */
+
+#carousel .classes-image {
+  display: block;
 }
