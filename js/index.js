@@ -6,34 +6,28 @@ function updateDateTime() {
 
 // carousel
 
-const images = [
-  'img/children-fit.jpg',
-  'img/fitness-seniors.jpg',
-  'img/man-fitness.jpg',
-  'img/pilates-yoga.jpg',
-  'img/pregnant-fitness.jpg',
-];
-
-let currIdx = 0;
-
-function showCurrentImage() {
-  const imgContainer = document.querySelector('.classes-image');
-  imgContainer.src = images[currIdx];
-}
-
-showCurrentImage();
-
-function nextImage() {
-  currIdx++;
-  if (currIdx >= images.length) currIdx = 0;
-  showCurrentImage();
-}
-
-function prevImage() {
-  currIdx--;
-  if (currIdx < 0) currIdx = images.length - 1;
-  showCurrentImage();
-}
-
-document.querySelector('.btn-prev').addEventListener('click', prevImage);
-document.querySelector('.btn-next').addEventListener('click', nextImage);
+$(document).ready(function () {
+  $('.slider').slick({
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 1000,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
